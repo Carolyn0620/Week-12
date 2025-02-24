@@ -10,5 +10,9 @@ def home():
 def second_page():
     return render_template('second-page.html')
 
+@app.route('/third-page')
+def third_page():
+    return render_template('third-page.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

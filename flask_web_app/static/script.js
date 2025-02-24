@@ -6,3 +6,7 @@ document.getElementById('testBtn').addEventListener('click', function() {
     window.location.href = 'second-page'; 
 });
 
+document.getElementById('imageBtn').addEventListener('click', function() {
+    window.location.href = '/third-page'; 
+});
+
