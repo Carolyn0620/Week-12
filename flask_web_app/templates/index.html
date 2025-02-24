@@ -3,12 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Flask Web App</title>
+    <style>
+        #uploadedImage {
+            display: none;
+            width: 300px; /* Set the desired width */
+            height: 200px; /* Set the desired height */
+        }
+    </style>
 </head>
 <body>
     <h1>Welcome to Flask!</h1>
     <button id="alertBtn">Click Me</button>
     <button id="testBtn">Test Login</button>
     <button id="imageBtn">Show Image</button>
+    <button id="browseBtn">Browse Image</button>
+    <input type="file" id="imageInput" style="display: none;">
+    <img id="uploadedImage" alt="Uploaded Image">
 
     <script src="/static/script.js"></script>
 </body>

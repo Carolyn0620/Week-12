@@ -3,12 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Third Page</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+        .image-size {
+            width: 300px; /* Set the desired width */
+            height: 200px; /* Set the desired height */
+        }
+    </style>
 </head>
 <body>
     <h1>Welcome to the Third Page!</h1>
-    <img src="{{ 'https://cdn.download.ams.birds.cornell.edu/api/v1/asset/202984001/1200' }}" alt="Description of Image">
-    
-    <button id="goBack">Go Back To Home Page</button>
+    <img id="mainImage" class="image-size" src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/202984001/1200" alt="Description of Image">
+
+    <img id="secondImage" class="image-size hidden" src="https://hips.hearstapps.com/hmg-prod/images/two-baby-wild-rabbits-kissing-royalty-free-image-1574723140.jpg" alt="Description of Image">
+    <button id="changeImageBtn">Change Image</button>
+
+    <button id="goBack">Back</button>
     <script src="/static/new_script.js"></script>
 </body>
 </html>
