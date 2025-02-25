@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Flask Web App</title>
+    
     <style>
         #uploadedImage {
             display: none;
@@ -13,12 +14,21 @@
 </head>
 <body>
     <h1>Welcome to Flask!</h1>
+    <style>
+        html{
+            background: rgb(220, 158, 221);
+        }
+        h1 {
+            color: #ffffff; /* Change this to any color you like */
+        }
+    </style>
     <button id="alertBtn">Click Me</button>
     <button id="testBtn">Test Login</button>
     <button id="imageBtn">Show Image</button>
     <button id="browseBtn">Browse Image</button>
     <input type="file" id="imageInput" style="display: none;">
     <img id="uploadedImage" alt="Uploaded Image">
+    <button id="discriptionBtn">Description</button>
 
     <script src="/static/script.js"></script>
 </body>

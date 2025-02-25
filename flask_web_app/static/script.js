@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Alert button functionality
-    var alertBtn = document.getElementById('alertBtn');
+    const alertBtn = document.getElementById('alertBtn');
     if (alertBtn) {
         alertBtn.addEventListener('click', function() {
             alert('Hello from JavaScript!');
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Navigate to second page functionality
-    var testBtn = document.getElementById('testBtn');
+    const testBtn = document.getElementById('testBtn');
     if (testBtn) {
         testBtn.addEventListener('click', function() {
             window.location.href = '/second-page';
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Navigate to third page functionality
-    var imageBtn = document.getElementById('imageBtn');
+    const imageBtn = document.getElementById('imageBtn');
     if (imageBtn) {
         imageBtn.addEventListener('click', function() {
             window.location.href = '/third-page';
@@ -24,28 +24,36 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Browse image button functionality
-    var browseBtn = document.getElementById('browseBtn');
+    const browseBtn = document.getElementById('browseBtn');
     if (browseBtn) {
         browseBtn.addEventListener('click', function() {
             document.getElementById('imageInput').click();
         });
     }
 
+    const descriptionBtn = document.getElementById('descriptionBtn');
+    if (descriptionBtn) {
+        descriptionBtn.addEventListener('click', function() {
+            window.location.href = '/sixth-page';
+        });
+    }
+
     // Handle image input change and display the selected image
-    var imageInput = document.getElementById('imageInput');
+    const imageInput = document.getElementById('imageInput');
     if (imageInput) {
         imageInput.addEventListener('change', function() {
-            var file = imageInput.files[0];
-            var reader = new FileReader();
+            const file = imageInput.files[0];
+            const reader = new FileReader();
 
             reader.onload = function(e) {
-                var uploadedImage = document.getElementById('uploadedImage');
+                const uploadedImage = document.getElementById('uploadedImage');
                 uploadedImage.src = e.target.result;
-                
                 uploadedImage.style.display = 'block'; // Show the image
             };
 
             reader.readAsDataURL(file);
         });
+
+      
     }
 });
